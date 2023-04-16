@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DateActivity">
+
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="250dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="64dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <DatePicker
+        android:id="@+id/datePicker2"
+        android:layout_width="250dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="40dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker1" />
+
+    <EditText
+        android:id="@+id/dText"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/wdText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker2"
+        app:layout_constraintVertical_bias="0.507" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="162dp"
+        android:layout_height="22dp"
+        android:text="Dni pomiędzy datami:"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/wdText"
+        app:layout_constraintEnd_toStartOf="@+id/dText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker2" />
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="111dp"
+        android:layout_height="65dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/wdText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dText"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker2"
+        app:layout_constraintVertical_bias="0.504" />
+
+    <TextView
+        android:id="@+id/wdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
+        android:text="Dni roboczych pomiędzy datami: xx"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker2"
+        app:layout_constraintVertical_bias="0.886" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
